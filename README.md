@@ -157,3 +157,14 @@ Curso::factory(50)->create();
 
 o mejor en DatabaseSeeder : 
 Curso::factory(50)->create();
+
+
+Los formularios deben llevar por defecto un token @csrf
+
+Para enviar el metodo put, html no lo tiene , hay que dejar el post, y poner otra directiva :
+@method('put')
+
+Crear un form request :
+php artisan make:request StorePostRequest
+
+voy por el capitulo 17

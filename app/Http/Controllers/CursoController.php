@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Curso;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreCurso;
 
 class CursoController extends Controller
 {
     public function index()
     {
-        $cursos = Curso::paginate();
+        $cursos = Curso::orderBy('id','desc')->paginate();
         return view('cursos.index', compact('cursos'));
     }
 
@@ -18,10 +19,43 @@ class CursoController extends Controller
         return view('cursos.create');
     }
 
-    public function show($id)
+    public function store(StoreCurso $request)
     {
-        $curso = Curso::find($id);
+
+        
+        //return $request;
+        $curso = new Curso();
+        $curso->name = $request->name;
+        $curso->description = $request->descripcion;
+        $curso->categoria = $request->categoria;
+        $curso->save();
+        return redirect()->route('cursos.show', $curso);
+    }
+
+    public function show(Curso $curso)
+    {
         // compact ($curso)  : ['curso'=> $curso]
+        return view('cursos.show', compact('curso'));
+    }
+
+    public function edit(Curso $curso)
+    {
+        return view('cursos.edit',compact('curso'));
+    }
+
+    public function update(Curso $curso, Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'descripcion' => 'required',
+            'categoria' => 'required'
+        ]);
+
+        $curso->name  = $request->name;
+        $curso->description  = $request->descripcion;
+        $curso->categoria  = $request->categoria;
+        $curso->save();
+
         return view('cursos.show', compact('curso'));
     }
 }
