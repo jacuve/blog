@@ -9,5 +9,5 @@
     <a href="{{route('cursos.edit', $curso)}}">Editar curso</a>
     <p><strong>Categoria: </strong>{{$curso->categoria}}
     </p>
-    <p>{{$curso->description}}</p>
+    <p>{{$curso->descripcion}}</p>
 @endsection
