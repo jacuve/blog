@@ -171,4 +171,11 @@ Cap 17 . Que es la asignacion masiva.
 
 Cap 18. Eliminar registro
 
-voy por el 19
+Cap 19 . Como crear rutas con route resoruce
+
+   Listar las rutas
+php artisan route:list
+
+voy por el 
+
+

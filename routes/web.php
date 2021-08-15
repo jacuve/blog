@@ -15,20 +15,12 @@ use App\Http\Controllers\CursoController;
 |
 */
 
+
 Route::get('/', HomeController::class);
 
-Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
-// Laravel 7 :
-//Route::get('cursos', 'CursoController@index');
+Route::resource('cursos', CursoController::class);
 
-Route::get('cursos/create', [CursoController::class, 'create'])->name('cursos.create');
+// para cambiar la url cursos por asignaturas, 
+// que la variable siga siendo curso, para que no falle con el controlador actual.
+// Route::resource('asignaturas', CursoController::class)->parameters(['asignaturas' => 'curso'])->names('cursos');
 
-Route::post('cursos', [CursoController::class, 'store'])->name('cursos.store');
-
-Route::get('cursos/{curso}', [CursoController::class, 'show'])->name('cursos.show');
-
-Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('cursos.edit');
-
-Route::put('cursos/{curso}', [CursoController::class, 'update'])->name('cursos.update');
-
-Route::delete('cursos/{curso}', [CursoController::class, 'destroy'])->name('cursos.destroy');
