@@ -167,5 +167,8 @@ Para enviar el metodo put, html no lo tiene , hay que dejar el post, y poner otr
 Crear un form request :
 php artisan make:request StorePostRequest
 
-voy por el capitulo 17 . Que es la asignacion masiva.
+Cap 17 . Que es la asignacion masiva.
 
+Cap 18. Eliminar registro
+
+voy por el 19

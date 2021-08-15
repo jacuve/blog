@@ -30,15 +30,5 @@ Route::get('cursos/{curso}', [CursoController::class, 'show'])->name('cursos.sho
 Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('cursos.edit');
 
 Route::put('cursos/{curso}', [CursoController::class, 'update'])->name('cursos.update');
-/*
-Route::get('cursos/{curso}/{categoria?}', function ($curso, $categoria = null) {
-    if ($categoria === null)
-    {
-        return 'Bienvenido al curso ' . $curso . ' de categoria ' . $categoria;
-    }
-    else {
-        return 'Bienvenido al curso ' . $curso ;
-    }
-    
-});
-*/
+
+Route::delete('cursos/{curso}', [CursoController::class, 'destroy'])->name('cursos.destroy');

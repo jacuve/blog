@@ -10,4 +10,11 @@
     <p><strong>Categoria: </strong>{{$curso->categoria}}
     </p>
     <p>{{$curso->descripcion}}</p>
+
+    <form action="{{route('cursos.destroy', $curso)}}" method="post">
+        @method('delete')
+        @csrf
+        <button type="submit">Borrar</button>
+    </form>
+
 @endsection
