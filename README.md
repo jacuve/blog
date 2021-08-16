@@ -176,6 +176,5 @@ Cap 19 . Como crear rutas con route resoruce
    Listar las rutas
 php artisan route:list
 
-voy por el 
-
+Cap 20 . Url amigables.
 

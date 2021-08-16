@@ -11,4 +11,12 @@ class Curso extends Model
 
     /*protected $fillable = ['name', 'descripcion', 'categoria'];*/
     protected $guarded = [];    // solo los campo para no guardar
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+    
 }
+
+
