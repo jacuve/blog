@@ -178,3 +178,5 @@ php artisan route:list
 
 Cap 20 . Url amigables.
 
+Cap 21 . Agregar navegabilidad a nuestro sitio web.
+

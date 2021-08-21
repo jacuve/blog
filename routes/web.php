@@ -16,7 +16,7 @@ use App\Http\Controllers\CursoController;
 */
 
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
 Route::resource('cursos', CursoController::class);
 
@@ -24,3 +24,4 @@ Route::resource('cursos', CursoController::class);
 // que la variable siga siendo curso, para que no falle con el controlador actual.
 // Route::resource('asignaturas', CursoController::class)->parameters(['asignaturas' => 'curso'])->names('cursos');
 
+Route::view('nosotros', 'nosotros')->name('nosotros');
