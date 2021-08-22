@@ -180,3 +180,9 @@ Cap 20 . Url amigables.
 
 Cap 21 . Agregar navegabilidad a nuestro sitio web.
 
+Cap 22 . Enviar emails con laravel.
+
+ Configurar en el fichero /config/mail.php
+ Tambien en el fichero .env, configurar MAIL_MAILER
+ mailtrap.io servidor de prueba falso para pruebas.
+
