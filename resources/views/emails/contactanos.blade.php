@@ -13,5 +13,8 @@
     <h1>Correo electrónico</h1>
     <p>Este es el primero correo por laravel</p>
 
+    <p>Nombre:<strong>{{$contacto['name']}}</strong></p>
+    <p>Correo:<strong>{{$contacto['correo']}}</strong></p>
+    <p>Mensaje:<strong>{{$contacto['mensaje']}}</strong></p>
 </body>
 </html>
